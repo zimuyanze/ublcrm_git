@@ -146,6 +146,10 @@ class BasicInformation extends Base
                     $this->error($file->getError(), url('admin/BasicInformation/edit',array('id'=>$data['id'])));
                 }
             }
+            //删除"/"  ","
+            if($pic['video']){
+                unlink(ROOT_PATH.substr(substr($pic['video'],1), 0, -1));
+            }
             $data['video'] = $video_url;
         }
         //更新信息
@@ -162,6 +166,16 @@ class BasicInformation extends Base
      */
     public function del()
     {
-
+        $id = request()->param('id');
+        $data = DB::name('basic_information')->where('id',$id)->find();
+        if($data['video']){
+            unlink(ROOT_PATH.substr(substr($data['video'],1), 0, -1));
+        }
+        $res = DB::name('basic_information')->delete(['id'=>$id]);
+        if($res){
+            $this->success('删除成功',url('admin/BasicInformation/index'));
+        }else{
+            $this->error('删除失败',url('admin/BasicInformation/index'));
+        }
     }
 }
