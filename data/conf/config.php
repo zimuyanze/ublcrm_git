@@ -35,13 +35,15 @@ return array (
   'baidumap_ak' => 'D91c810554767b49e3bdd2a7b25d97c1',
   'upload_validate' => 
   array (
-    'size' => 10485760,
+    'size' => 26214400,
     'ext' => 
     array (
       0 => 'jpg',
       1 => 'gif',
       2 => 'png',
       3 => 'jpeg',
+      4 => 'mp3',
+      5 => 'flac',
     ),
   ),
   'upload_path' => '/data/upload',

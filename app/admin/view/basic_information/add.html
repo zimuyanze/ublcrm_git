@@ -13,64 +13,46 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<form class="form-horizontal adminform" name="admin_list_add" method="post" action="{:url('admin/Admin/admin_runadd')}">
+				<form class="form-horizontal adminform" name="admin_list_add" method="post" action="{:url('admin/BasicInformation/runadd')}">
+					<div class="space-4"></div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 所属用户组： </label>
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 校长姓名：  </label>
 						<div class="col-sm-10">
-							
+							<input type="text" name="principal_name" placeholder="输入校长姓名" class="col-xs-10 col-sm-5" required/>
+							<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>请填写真实姓名</span>
 						</div>
 					</div>
 					<div class="space-4"></div>
 
 					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 登录用户名：  </label>
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 机构名称：  </label>
 						<div class="col-sm-10">
-							<input type="text" name="admin_username" id="admin_username" placeholder="输入登录用户名" class="col-xs-10 col-sm-5" required/>
-							<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>用户名必须是以字母开头，数字、符号组合</span>
+							<input type="text" name="company_name" placeholder="输入机构名称" class="col-xs-10 col-sm-5" required/>
+							<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>请填写真实机构名称</span>
 						</div>
 					</div>
 					<div class="space-4"></div>
 
 					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 登录密码：  </label>
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 联系方式：  </label>
 						<div class="col-sm-10">
-							<input type="text" name="admin_pwd" id="admin_pwd" maxlength="15" minlength="6" placeholder="输入登录密码" class="col-xs-10 col-sm-5" required/>
-							<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>密码必须大于6位，小于15位</span>
-						</div>
-					</div>
-					<div class="space-4"></div>
-
-					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 用户邮箱：  </label>
-						<div class="col-sm-10">
-							<input type="email" name="admin_email" id="admin_email" placeholder="输入用户邮箱" class="col-xs-10 col-sm-5" required/>
-							<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>用于密码找回，请认真填写</span>
-						</div>
-					</div>
-					<div class="space-4"></div>
-
-					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 手机号码：  </label>
-						<div class="col-sm-10">
-							<input type="number" name="admin_tel" id="admin_tel" placeholder="输入手机号码" class="col-xs-10 col-sm-5" required/>
+							<input type="number" name="principal_tel" id="admin_tel" placeholder="输入手机号码" class="col-xs-10 col-sm-5" required/>
 							<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>只能填写数字</span>
 						</div>
 					</div>
 					<div class="space-4"></div>
-
 					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 通用网名：  </label>
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 校区地址：  </label>
 						<div class="col-sm-10">
-							<input type="text" name="admin_realname" id="admin_realname" placeholder="输入通用网名" class="col-xs-10 col-sm-5" required/>
-							<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>用于发布信息所有人，且在前端显示</span>
+							<input type="text" name="company_address"  placeholder="输入校区地址" class="col-xs-10 col-sm-5" required/>
+							<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>请填写真实地址</span>
 						</div>
 					</div>
 					<div class="space-4"></div>
-
 					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 是否审核： </label>
+						<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 是否成交： </label>
 						<div class="col-sm-10" style="padding-top:5px;">
-							<input name="admin_open" id="admin_open" value="1" class="ace ace-switch ace-switch-4 btn-flat" type="checkbox" />
+							<input name="is_deal" value="1" class="ace ace-switch ace-switch-4 btn-flat" type="checkbox" />
 							<span class="lbl">&nbsp;默认关闭</span>
 						</div>
 					</div>
