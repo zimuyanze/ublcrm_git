@@ -8,6 +8,7 @@
 namespace app\admin\controller;
 
 use think\Db;
+use think\Session;
 
 /**
  * 插件后台管理页面
@@ -23,7 +24,7 @@ class BasicInformation extends Base
         //搜索条件
         $search = request()->param('search_name');
         if($search) {
-            $where['principal_tel'] = $search;
+            $where['principal_name|principal_tel|company_name|number'] = ['like', '%' . $search . '%'];
         }
         //获取信息
         $data = DB::name('basic_information')->order('id desc')->where($where)->paginate(10);
@@ -48,6 +49,8 @@ class BasicInformation extends Base
         $data = request()->param();
         //生成18位编号ubl+年月日+7位随机数
         $data['number'] = 'UBL'.date('ymdH',time()).mt_rand(1000000, 9999999);
+        //录入人id
+        $data['admin_id'] = Session::get('admin_auth.aid');
         //执行添加操作
         $res = DB::name('basic_information')->insertGetId($data);
         //判断添加状态
@@ -177,5 +180,12 @@ class BasicInformation extends Base
         }else{
             $this->error('删除失败',url('admin/BasicInformation/index'));
         }
+    }
+    /**
+     * 客户填写信息详情
+     */
+    public function show()
+    {
+        return $this->fetch();
     }
 }
