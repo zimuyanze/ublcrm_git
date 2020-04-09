@@ -32,6 +32,7 @@ class BasicInformation extends Base
         $page = $data->render();
         $this->assign('data',$data);
         $this->assign('page',$page);
+        $this->assign('search_name',$search);
         return $this->fetch();
     }
     /**

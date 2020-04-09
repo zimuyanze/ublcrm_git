@@ -1,0 +1,116 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+<div class="page-content">
+    <div class="row maintop">
+        <div class="col-xs-4 col-sm-2 margintop5">
+            <a href="{:url('admin/BasicInformation/add')}">
+                <button class="btn btn-sm btn-danger">
+                    <i class="ace-icon fa fa-bolt bigger-110"></i>
+                    添加用户信息
+                </button>
+            </a>
+        </div>
+        <div class="col-xs-10 col-sm-5 margintop5">
+            <form name="admin_list_sea" class="form-search" method="post" action="{:url('admin/BasicInformation/index')}">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="ace-icon fa fa-check"></i>
+                    </span>
+                    <input type="text" name="search_name" class="form-control" value="{$search_name}" placeholder="输入需查询的信息" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-purple btn-sm">
+                            <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+                            搜索
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-4 col-sm-5 margintop5">
+            <div class="input-group-btn">
+                <a href="{:url('admin/BasicInformation/index')}">
+                    <button type="button" class="btn btn-sm  btn-purple">
+                        <span class="ace-icon fa fa-globe icon-on-right bigger-110"></span>
+                        显示全部
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div>
+                <form id="leftnav" name="leftnav" method="post" action="" >
+                    <input type="hidden" name="checkk" id="checkk" value="1" /><!--用于判断操作类型-->
+                    <table class="table table-striped table-bordered table-hover" id="dynamic-table">
+                        <colgroup>
+                            <col style="width: 15%;">
+                            <col style="width: 10%;">
+                            <col style="width: 10%;">
+                            <col style="width: 15%;">
+                            <col style="width: 30%;">
+                            <col style="width: 10%;">
+                            <col style="width: 10%;">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="hidden-sm hidden-xs">编号</th>
+                            <th class="hidden-sm hidden-xs">机构名称</th>
+                            <th class="hidden-sm hidden-xs">校长姓名</th>
+                            <th class="hidden-sm hidden-xs">联系方式</th>
+                            <th class="hidden-sm hidden-xs">机构详细地址</th>
+                            <th class="hidden-sm hidden-xs">是否成交</th>
+                            <th class="hidden-sm hidden-xs" style="border-right:#CCC solid 1px;">操作</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        {foreach name="data" item="v"}
+                        <tr>
+                            <td>{$v.number}</td>
+                            <td>{$v.company_name}</td>
+                            <td>{$v.principal_name}</td>
+                            <td>{$v.principal_tel}</td>
+                            <td>{$v.company_address}</td>
+                            <td>
+                                {if condition="$v['is_deal'] eq 1"}
+                                <span style="color: green">已成交</span>
+                                {else/}
+                                <span style="color: red">未成交</span>
+                                {/if}
+                            </td>
+                            <td>
+                                <div class="hidden-sm hidden-xs action-buttons">
+                                    <a class="green" href="{:url('admin/BasicInformation/',array('id'=>$v['id']))}" title="修改">
+                                        <i class="ace-icon fa fa-share bigger-130"></i>
+                                    </a>
+                                    <a class="orange" href="{:url('admin/BasicInformation/show',array('id'=>$v['id']))}" title="修改">
+                                        <i class="ace-icon fa fa-eye bigger-130"></i>
+                                    </a>
+                                    <a class="blue" href="{:url('admin/BasicInformation/edit',array('id'=>$v['id']))}" title="修改">
+                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                    </a>
+
+                                    <a class="red confirm-rst-url-btn" data-info="你确定要删除吗？" href="{:url('admin/BasicInformation/del',array('id'=>$v['id']))}" title="删除">
+                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        <tr>
+                            <td height="50" colspan="10" align="left">{$page}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div><!-- /.page-content -->
+{/block}
