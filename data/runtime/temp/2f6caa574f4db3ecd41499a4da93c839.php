@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html";i:1586484414;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html";i:1586502341;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -305,7 +305,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 用户邮箱：  </label>
 					<div class="col-sm-10">
-						<input type="email" name="email"  class="col-xs-10 col-sm-5" required/>
+						<input type="email" name="email" value="<?php echo $res['email']; ?>" class="col-xs-10 col-sm-5" required/>
 					</div>
 				</div>
 				<div class="space-4"></div>

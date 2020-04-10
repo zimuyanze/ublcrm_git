@@ -33,7 +33,7 @@ class BasicInformation extends Base
         }
         //判断访问人身份
         $group_id = DB::name('auth_group_access')->where('uid',Session::get('admin_auth.aid'))->find();
-        if ($group_id['group_id'] == 4) {
+        if ($group_id['group_id'] == 4 || $group_id['group_id'] == 1 ){
             //获取信息
             $data = DB::name('basic_information')->order('id desc')->where($where)->paginate(10);
             //分页

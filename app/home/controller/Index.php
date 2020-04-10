@@ -24,10 +24,10 @@ class Index extends Base
             if($id) {
                 return $this->view->fetch(':index');
             } else {
-                return "地址不合法";
+                $this->error('参数不正确',url('home/Index/redirects'));
             }
         } else {
-            return "地址不合法";
+            $this->error('已填写过会员信息',url('home/Index/redirects'));
         }
 
 	}
@@ -99,11 +99,20 @@ class Index extends Base
     {
         $data = request()->param();
         $res = DB::name('information_details')->insertGetId($data);
+        DB::name('basic_information')->where('id',$data['basic_id'])->update(['is_details'=>1]);
         //判断保存状态
         if($res){
-            $this->success('提交成功');
+            $this->success('提交成功',url('home/Index/redirects'));
         }else{
-            $this->error('提交失败');
+            $this->error('提交失败',url('home/Index/index',array('id'=>$data['basic_id'])));
         }
     }
+    /**
+     * 重定向
+     */
+    public function redirects()
+    {
+        return $this->view->fetch(':redirects');
+    }
+
 }

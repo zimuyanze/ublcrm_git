@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html";i:1586484789;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html";i:1586502154;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +15,10 @@
    <form action="<?php echo url('home/Index/runshow'); ?>" method="post">
       <div class="personal">
          <h2>机构分析</h2>
+         <div class="form-add-w3ls">
+            <p>机构名称</p>
+            <input type="text" required name="company_name" placeholder="机构名称" >
+         </div>
          <div class="form-left-w3l">
             <p>姓名</p>
             <input type="text" required name="principal_name" placeholder="姓名" >
