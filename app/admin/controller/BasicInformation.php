@@ -26,10 +26,21 @@ class BasicInformation extends Base
         if($search) {
             $where['principal_name|principal_tel|company_name|number'] = ['like', '%' . $search . '%'];
         }
+        //状态
+        $opentype_check = input('opentype_check','');
+        if($opentype_check !== ''){
+            $where['is_deal'] = $opentype_check;
+        }
+
         //获取信息
         $data = DB::name('basic_information')->order('id desc')->where($where)->paginate(10);
         //分页
         $page = $data->render();
+        //域名
+        $request = request()->instance();
+        $domain = $request->domain();
+        $this->assign('domain',$domain);
+        $this->assign('opentype_check',$opentype_check);
         $this->assign('data',$data);
         $this->assign('page',$page);
         $this->assign('search_name',$search);
@@ -160,9 +171,9 @@ class BasicInformation extends Base
         $res = DB::name('basic_information')->where('id',$data['id'])->update($data);
         //判断修改状态
         if($res){
-            $this->success('提交成功',url('admin/BasicInformation/edit',array('id'=>$data['id'])));
+            $this->success('保存成功',url('admin/BasicInformation/edit',array('id'=>$data['id'])));
         }else{
-            $this->error('提交失败',url('admin/BasicInformation/edit',array('id'=>$data['id'])));
+            $this->error('保存失败',url('admin/BasicInformation/edit',array('id'=>$data['id'])));
         }
     }
     /**
@@ -187,6 +198,24 @@ class BasicInformation extends Base
      */
     public function show()
     {
+        $id = request()->param('id');
+        $res = DB::name('information_details')->where('basic_id',$id)->find();
+        $this->assign('id',$id);
+        $this->assign('res',$res);
         return $this->fetch();
+    }
+    /**
+     * 客户填写信息更新
+     */
+    public function runshow()
+    {
+        $data = request()->param();
+        $res = DB::name('information_details')->where('basic_id',$data['basic_id'])->update($data);
+        //判断保存状态
+        if($res){
+            $this->success('保存成功',url('admin/BasicInformation/show',array('id'=>$data['basic_id'])));
+        }else{
+            $this->error('保存失败',url('admin/BasicInformation/show',array('id'=>$data['basic_id'])));
+        }
     }
 }

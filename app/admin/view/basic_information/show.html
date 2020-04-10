@@ -1,0 +1,341 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+<div class="page-content">
+	<!--主题-->
+	<div class="page-header">
+		<h1>
+			您当前操作
+			<small>
+				<i class="ace-icon fa fa-angle-double-right"></i>
+				查看详情
+			</small>
+		</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<form class="form-horizontal adminform" name="admin_list_add" method="post" action="{:url('admin/BasicInformation/runshow')}">
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 机构名称：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="company_name"  value="{$res.company_name}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 姓名：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="principal_name" value="{$res.principal_name}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 身份证号：  </label>
+					<div class="col-sm-10">
+						<input type="number" name="id_card" value="{$res.id_card}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 联系方式：  </label>
+					<div class="col-sm-10">
+						<input type="number" name="principal_tel" id="admin_tel"  value="{$res.principal_tel}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 生日：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="birth"  value="{$res.birth}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 用户邮箱：  </label>
+					<div class="col-sm-10">
+						<input type="email" name="email"  class="col-xs-10 col-sm-5" required/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 详细地址：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="address"  value="{$res.address}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 成立时间：  </label>
+					<div class="col-sm-10">
+						<input type="date" name="establishment_time"  value="{$res.establishment_time}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 宗教信仰：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="religious_belief"  value="{$res.religious_belief}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 政治面貌：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="political_affiliation"  value="{$res.political_affiliation}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 个人履历：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="personal_resume" value="{$res.personal_resume}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 近三年营业收入：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="income" value="{$res.income}"  class="col-xs-10 col-sm-5"/>
+						<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 净利润：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="net_profit"  value="{$res.net_profit}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 股东构成：  </label>
+					<div class="col-sm-10">
+						<input type="text" name="shareholder_composition"  value="{$res.shareholder_composition}"  class="col-xs-10 col-sm-5"/>
+					</div>
+				</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 融资经历：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="financing_experience"  value="{$res.financing_experience}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 参加过那些学习：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="study"  value="{$res.study}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 主营产品+加盟品牌：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="main_products"  value="{$res.main_products}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right"  for="form-field-1"> 老师性质：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="teacher_nature"  value="{$res.teacher_nature}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>兼职 / 全职</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 目前学生数量：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="number_of_students"  value="{$res.number_of_students}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 之前做过什么营销活动：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="previous_marketing_activities"  value="{$res.previous_marketing_activities}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 主要消费人群年龄段：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="consumer_group"  value="{$res.consumer_group}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 学生年龄段：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="student_age"  value="{$res.student_age}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 转介绍率：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="referral_rate"  value="{$res.referral_rate}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 所在商圈属性：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="property"  value="{$res.property}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 门面位置：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="door_position"  value="{$res.door_position}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 门店面积：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="store_area"  value="{$res.store_area}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 截流产品：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="closure_products"  value="{$res.closure_products}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 粘性产品：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="viscous_products"  value="{$res.viscous_products}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 利润产品：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="profit_products"  value="{$res.profit_products}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 延伸产品：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="extended_products"  value="{$res.extended_products}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 客单价：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="customer_price"  value="{$res.customer_price}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 毛利率：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="gross_profit_margin"  value="{$res.gross_profit_margin}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 最大消费：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="maximum_consumption"  value="{$res.maximum_consumption}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 最低消费：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="minimum_consumption"  value="{$res.minimum_consumption}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 客户来源：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="customer_source"  value="{$res.customer_source}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 商协会资源：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="business_association_resources"  value="{$res.business_association_resources}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 经销商资源：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="dealer_resources"  value="{$res.dealer_resources}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 异业资源：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="different_industry_resources"  value="{$res.different_industry_resources}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 员工资源：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="employee_resources"  value="{$res.employee_resources}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 其他资源：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="other_resources"  value="{$res.other_resources}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 当下校区关注问题：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="current_campus_concerns"  value="{$res.current_campus_concerns}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 曾经的那些解决方案：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="solutions"  value="{$res.solutions}"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 效果如何：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="how_effective"  value="{$res.how_effective}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 为什么选择优伯乐：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="choose_uber"  value="{$res.choose_uber}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 对优伯乐有那些期待：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="expectations_for_uber"  value="{$res.expectations_for_uber}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 有那些建议：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="suggestions"  value="{$res.suggestions}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div><div class="form-group">
+				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 疫情时期的业务规划：  </label>
+				<div class="col-sm-10">
+					<input type="text" name="plan"  value="{$res.plan}"  class="col-xs-10 col-sm-5"/>
+				</div>
+			</div>
+				<div class="space-4"></div>
+				<input type="hidden" name="basic_id" value="{$id}">
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button class="btn" type="reset">
+							<i class="ace-icon fa fa-undo bigger-110"></i>
+							重置
+						</button>
+						&nbsp; &nbsp; &nbsp;
+						<button class="btn btn-info" type="submit">
+							<i class="ace-icon fa fa-check bigger-110"></i>
+							保存
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{/block}

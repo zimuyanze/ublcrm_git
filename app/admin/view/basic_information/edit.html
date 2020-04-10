@@ -7,7 +7,7 @@
 			您当前操作
 			<small>
 				<i class="ace-icon fa fa-angle-double-right"></i>
-				添加用户信息
+				编辑用户信息
 			</small>
 		</h1>
 	</div>
@@ -97,7 +97,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 备注：  </label>
 					<div class="col-sm-10">
-						<textarea name="remarks" class="col-xs-12 col-sm-12" id="news_pic_content" ></textarea>
+						<textarea name="remarks" class="col-xs-12 col-sm-12" id="news_pic_content" >{$data.remarks}</textarea>
 
 					</div>
 				</div>
@@ -155,8 +155,8 @@
 									关闭
 								</button>
 							</div>
-						</div><!-- /.modal-content -->
-					</div><!-- /.modal-dialog -->
+						</div>
+					</div>
 				</div>
 				<div class="clearfix form-actions">
 					<div class="col-md-offset-3 col-md-9">
@@ -174,22 +174,21 @@
 			</form>
 		</div>
 	</div>
-
-</div><!-- /.page-content -->
+</div>
 {/block}
 {block name="scripts"}
 <script>
     function sound() {
         $("#ulList").empty();
         var fp = $("#fUpload");
-        var lg = fp[0].files.length; // get length
+        var lg = fp[0].files.length;
         var items = fp[0].files;
         var fragment = "";
         if (lg > 0) {
             for (var i = 0; i < lg; i++) {
-                var fileName = items[i].name; // get file name
-                var fileSize = items[i].size; // get file size
-                var fileType = items[i].type; // get file type
+                var fileName = items[i].name;
+                var fileSize = items[i].size;
+                var fileType = items[i].type;
                 fragment += "<li>" + fileName + " (<b>" + fileSize + "</b> bytes) - Type :" + fileType + "</li>";
             }
             $("#ulList").append(fragment);

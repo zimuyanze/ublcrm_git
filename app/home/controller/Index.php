@@ -16,7 +16,20 @@ class Index extends Base
 {
 	public function index()
     {
-		return $this->view->fetch(':index');
+        $id = request()->param('id');
+        $res = DB::name('information_details')->where('basic_id',$id)->find();
+        if(!$res){
+            $this->assign('id',$id);
+            $this->assign('res',$res);
+            if($id) {
+                return $this->view->fetch(':index');
+            } else {
+                return "地址不合法";
+            }
+        } else {
+            return "地址不合法";
+        }
+
 	}
 	public function visit()
     {
@@ -79,4 +92,18 @@ class Index extends Base
 			}
 		}
 	}
+    /**
+     * 客户填写信息更新
+     */
+    public function runshow()
+    {
+        $data = request()->param();
+        $res = DB::name('information_details')->insertGetId($data);
+        //判断保存状态
+        if($res){
+            $this->success('提交成功');
+        }else{
+            $this->error('提交失败');
+        }
+    }
 }
