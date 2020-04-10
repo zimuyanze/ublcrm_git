@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html";i:1586426032;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html";i:1586484414;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -531,12 +531,14 @@
 				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 当下校区关注问题：  </label>
 				<div class="col-sm-10">
 					<input type="text" name="current_campus_concerns"  value="<?php echo $res['current_campus_concerns']; ?>"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
 				</div>
 			</div>
 				<div class="space-4"></div><div class="form-group">
 				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 曾经的那些解决方案：  </label>
 				<div class="col-sm-10">
 					<input type="text" name="solutions"  value="<?php echo $res['solutions']; ?>"  class="col-xs-10 col-sm-5"/>
+					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>输入时尽量用 ',' 分割</span>
 				</div>
 			</div>
 				<div class="space-4"></div><div class="form-group">

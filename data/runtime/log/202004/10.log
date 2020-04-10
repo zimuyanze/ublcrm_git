@@ -2520,3 +2520,286 @@
 [ sql ] [ SQL ] SELECT * FROM `ubl_auth_rule` WHERE  `status` = 1  AND `pid` IS NULL ORDER BY `sort` [ RunTime:0.000396s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_information_details` [ RunTime:0.001215s ]
 [ sql ] [ SQL ] SELECT * FROM `ubl_information_details` WHERE  `basic_id` = 4 LIMIT 1 [ RunTime:0.000592s ]
+---------------------------------------------------------------
+[ 2020-04-10T10:10:23+08:00 ] 0.0.0.0 GET localhost/admin/basic_information/show/id/4.html
+[运行时间：0.062712s] [吞吐率：15.95req/s] [内存消耗：4,902.60kb] [文件加载：77]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'basic_information',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=6rqorui5lbh2tkh008foi18604; yf_logged_user=aErVjGp6UmuuYjrAD; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/basic_information/index.html',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000398s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.002009s ]
+[ info ] [ RUN ] app\admin\controller\BasicInformation->show[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\BasicInformation.php ]
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'id',
+  7 => 'res',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001303s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002215s ] mysql:host=127.0.0.1;port=3306;dbname=ublcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_auth_rule` [ RunTime:0.001745s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ubl_auth_rule` WHERE  `name` = 'admin/BasicInformation/show' ORDER BY `level` DESC,`sort` LIMIT 1 [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `ubl_auth_rule` ORDER BY `level` DESC,`sort` [ RunTime:0.000702s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ubl_auth_rule` WHERE  `name` = 'admin/BasicInformation/show'  AND `status` = 1 ORDER BY `level` DESC,`sort` LIMIT 1 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `ubl_auth_rule` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_auth_rule` WHERE  `status` = 1  AND `pid` IS NULL ORDER BY `sort` [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_information_details` [ RunTime:0.001632s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_information_details` WHERE  `basic_id` = 4 LIMIT 1 [ RunTime:0.000594s ]
+---------------------------------------------------------------
+[ 2020-04-10T10:10:26+08:00 ] 0.0.0.0 GET localhost/admin/basic_information/index.html
+[运行时间：0.051805s] [吞吐率：19.30req/s] [内存消耗：4,695.62kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'basic_information',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6rqorui5lbh2tkh008foi18604; yf_logged_user=aErVjGp6UmuuYjrAD; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/basic_information/show/id/4.html',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000310s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.002362s ]
+[ info ] [ RUN ] app\admin\controller\BasicInformation->index[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\BasicInformation.php ]
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\index.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'domain',
+  7 => 'opentype_check',
+  8 => 'data',
+  9 => 'page',
+  10 => 'search_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001489s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001522s ] mysql:host=127.0.0.1;port=3306;dbname=ublcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_auth_rule` [ RunTime:0.001368s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ubl_auth_rule` WHERE  `name` = 'admin/BasicInformation/index' ORDER BY `level` DESC,`sort` LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `ubl_auth_rule` ORDER BY `level` DESC,`sort` [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ubl_auth_rule` WHERE  `name` = 'admin/BasicInformation/index'  AND `status` = 1 ORDER BY `level` DESC,`sort` LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `ubl_auth_rule` WHERE  `id` = 328 LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_auth_rule` WHERE  `status` = 1  AND `pid` = 327 ORDER BY `sort` [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_basic_information` [ RunTime:0.001245s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_basic_information` LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_basic_information` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000416s ]
+---------------------------------------------------------------
+[ 2020-04-10T10:13:15+08:00 ] 0.0.0.0 GET localhost/admin/basic_information/index.html
+[运行时间：0.063492s] [吞吐率：15.75req/s] [内存消耗：4,695.70kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'basic_information',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6rqorui5lbh2tkh008foi18604; yf_logged_user=aErVjGp6UmuuYjrAD; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/basic_information/show/id/4.html',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000321s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.001784s ]
+[ info ] [ RUN ] app\admin\controller\BasicInformation->index[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\BasicInformation.php ]
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\index.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'domain',
+  7 => 'opentype_check',
+  8 => 'data',
+  9 => 'page',
+  10 => 'search_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001655s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010634s ] mysql:host=127.0.0.1;port=3306;dbname=ublcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_auth_rule` [ RunTime:0.002014s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ubl_auth_rule` WHERE  `name` = 'admin/BasicInformation/index' ORDER BY `level` DESC,`sort` LIMIT 1 [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `ubl_auth_rule` ORDER BY `level` DESC,`sort` [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ubl_auth_rule` WHERE  `name` = 'admin/BasicInformation/index'  AND `status` = 1 ORDER BY `level` DESC,`sort` LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `ubl_auth_rule` WHERE  `id` = 328 LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_auth_rule` WHERE  `status` = 1  AND `pid` = 327 ORDER BY `sort` [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_basic_information` [ RunTime:0.001337s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_basic_information` LIMIT 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_basic_information` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000352s ]
+---------------------------------------------------------------
+[ 2020-04-10T10:13:26+08:00 ] 0.0.0.0 GET localhost/home/index/index/id/9.html
+[运行时间：0.059458s] [吞吐率：16.82req/s] [内存消耗：3,695.30kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=6rqorui5lbh2tkh008foi18604; yf_logged_user=aErVjGp6UmuuYjrAD; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '9',
+)
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/home\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000442s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.001758s ]
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\phpstudy\WWW\ublcrm_zmyz\app\home\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'id',
+  23 => 'res',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001245s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011600s ] mysql:host=127.0.0.1;port=3306;dbname=ublcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_member_list` [ RunTime:0.001520s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_member_list` WHERE  `member_list_id` = 1 LIMIT 1 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_admin` [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_admin` WHERE  `member_id` = 1 LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_information_details` [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_information_details` WHERE  `basic_id` = 9 LIMIT 1 [ RunTime:0.000826s ]
