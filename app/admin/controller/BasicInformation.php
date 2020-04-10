@@ -31,15 +31,24 @@ class BasicInformation extends Base
         if($opentype_check !== ''){
             $where['is_deal'] = $opentype_check;
         }
-
-        //获取信息
-        $data = DB::name('basic_information')->order('id desc')->where($where)->paginate(10);
-        //分页
-        $page = $data->render();
+        //判断访问人身份
+        $group_id = DB::name('auth_group_access')->where('uid',Session::get('admin_auth.aid'))->find();
+        if ($group_id['group_id'] == 4) {
+            //获取信息
+            $data = DB::name('basic_information')->order('id desc')->where($where)->paginate(10);
+            //分页
+            $page = $data->render();
+        } else {
+            //获取信息
+            $data = DB::name('basic_information')->order('id desc')->where($where)->where('admin_id',Session::get('admin_auth.aid'))->paginate(10);
+            //分页
+            $page = $data->render();
+        }
         //域名
         $request = request()->instance();
         $domain = $request->domain();
         $this->assign('domain',$domain);
+        $this->assign('group_id',$group_id);
         $this->assign('opentype_check',$opentype_check);
         $this->assign('data',$data);
         $this->assign('page',$page);
