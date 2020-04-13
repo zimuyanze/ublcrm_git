@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html";i:1586744184;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html";i:1586747802;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -308,7 +308,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 生日：  </label>
 					<div class="col-sm-10">
-						<input type="text" name="birth"  value="<?php echo $res['birth']; ?>"  class="col-xs-10 col-sm-5"/>
+						<input type="date" name="birth"  value="<?php echo $res['birth']; ?>" required class="col-xs-10 col-sm-5"/>
 					</div>
 				</div>
 				<div class="space-4"></div>
@@ -329,7 +329,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 成立时间：  </label>
 					<div class="col-sm-10">
-						<input type="date" name="establishment_time"  value="<?php echo $res['establishment_time']; ?>"  class="col-xs-10 col-sm-5"/>
+						<input type="date" name="establishment_time" required value="<?php echo $res['establishment_time']; ?>"  class="col-xs-10 col-sm-5"/>
 					</div>
 				</div>
 				<div class="space-4"></div>
