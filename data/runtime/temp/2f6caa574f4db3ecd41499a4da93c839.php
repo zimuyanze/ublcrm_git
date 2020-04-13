@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html";i:1586502341;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\show.html";i:1586744184;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -280,6 +280,16 @@
 						<input type="text" name="principal_name" value="<?php echo $res['principal_name']; ?>"  class="col-xs-10 col-sm-5"/>
 					</div>
 				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 性别：  </label>
+					<div class="col-sm-10">
+						<select  class="col-xs-10 col-sm-5" name="principal_name" id="">
+							<option value="">-- 请选择 --</option>
+							<option value="1" <?php if(($res['sex']==1)): ?>selected<?php endif; ?>>男</option>
+							<option value="0" <?php if(($res['sex']==0)): ?>selected<?php endif; ?>>女</option>
+						</select>
+					</div>
+				</div>
 				<div class="space-4"></div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 身份证号：  </label>
@@ -383,12 +393,16 @@
 					<input type="text" name="main_products"  value="<?php echo $res['main_products']; ?>"  class="col-xs-10 col-sm-5"/>
 				</div>
 			</div>
-				<div class="space-4"></div><div class="form-group">
-				<label class="col-sm-2 control-label no-padding-right"  for="form-field-1"> 老师性质：  </label>
-				<div class="col-sm-10">
-					<input type="text" name="teacher_nature"  value="<?php echo $res['teacher_nature']; ?>"  class="col-xs-10 col-sm-5"/>
-					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>兼职 / 全职</span>
-				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 老师性质：  </label>
+					<div class="col-sm-10">
+						<select  class="col-xs-10 col-sm-5" name="teacher_nature">
+							<option value="">-- 请选择 --</option>
+							<option value="1" <?php if(($res['teacher_nature']==1)): ?>selected<?php endif; ?>>兼职</option>
+							<option value="0" <?php if(($res['teacher_nature']==0)): ?>selected<?php endif; ?>>全职</option>
+						</select>
+					</div>
 			</div>
 				<div class="space-4"></div><div class="form-group">
 				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 目前学生数量：  </label>

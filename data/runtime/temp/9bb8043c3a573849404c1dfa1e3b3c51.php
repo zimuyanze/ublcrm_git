@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:71:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\index.html";i:1586505300;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:71:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\index.html";i:1586509840;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -350,9 +350,6 @@
                                     <?php if(($v['is_details'])==1): if(($group_id == 4 || 1)): ?>
                                     <a class="orange" href="<?php echo url('admin/BasicInformation/show',array('id'=>$v['id'])); ?>" title="查看">
                                         <i class="ace-icon fa fa-eye bigger-130"></i>
-                                    </a>
-                                    <a class="yellow confirm-rst-url-btn" href=" javascript:;" title="推送"  data-info="<?php echo $domain; ?><?php echo url('home/Index/index',array('id'=>$v['id'])); ?>">
-                                        <i class="ace-icon fa fa-cloud-download bigger-130"></i>
                                     </a>
                                     <?php endif; else: ?>
                                     <a class="yellow confirm-rst-url-btn" href=" javascript:;" title="推送"  data-info="<?php echo $domain; ?><?php echo url('home/Index/index',array('id'=>$v['id'])); ?>">

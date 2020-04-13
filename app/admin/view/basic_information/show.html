@@ -28,6 +28,16 @@
 						<input type="text" name="principal_name" value="{$res.principal_name}"  class="col-xs-10 col-sm-5"/>
 					</div>
 				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 性别：  </label>
+					<div class="col-sm-10">
+						<select  class="col-xs-10 col-sm-5" name="principal_name" id="">
+							<option value="">-- 请选择 --</option>
+							<option value="1" {if($res.sex==1)}selected{/if}>男</option>
+							<option value="0" {if($res.sex==0)}selected{/if}>女</option>
+						</select>
+					</div>
+				</div>
 				<div class="space-4"></div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 身份证号：  </label>
@@ -46,7 +56,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 生日：  </label>
 					<div class="col-sm-10">
-						<input type="text" name="birth"  value="{$res.birth}"  class="col-xs-10 col-sm-5"/>
+						<input type="date" name="birth"  value="{$res.birth}"  class="col-xs-10 col-sm-5"/>
 					</div>
 				</div>
 				<div class="space-4"></div>
@@ -131,12 +141,16 @@
 					<input type="text" name="main_products"  value="{$res.main_products}"  class="col-xs-10 col-sm-5"/>
 				</div>
 			</div>
-				<div class="space-4"></div><div class="form-group">
-				<label class="col-sm-2 control-label no-padding-right"  for="form-field-1"> 老师性质：  </label>
-				<div class="col-sm-10">
-					<input type="text" name="teacher_nature"  value="{$res.teacher_nature}"  class="col-xs-10 col-sm-5"/>
-					<span class="lbl col-xs-12 col-sm-7"><span class="red">*</span>兼职 / 全职</span>
-				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 老师性质：  </label>
+					<div class="col-sm-10">
+						<select  class="col-xs-10 col-sm-5" name="teacher_nature">
+							<option value="">-- 请选择 --</option>
+							<option value="1" {if($res.teacher_nature==1)}selected{/if}>兼职</option>
+							<option value="0" {if($res.teacher_nature==0)}selected{/if}>全职</option>
+						</select>
+					</div>
 			</div>
 				<div class="space-4"></div><div class="form-group">
 				<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 目前学生数量：  </label>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html";i:1586502154;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html";i:1586746083;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,22 +23,25 @@
             <p>姓名</p>
             <input type="text" required name="principal_name" placeholder="姓名" >
          </div>
-         <div class="form-right-w3ls ">
+         <div class="form-right-w3ls">
             <p>性别</p>
-            <input type="text" required name="sex" placeholder="性别"  >
-            <div class="clear"></div>
+            <select class="form-control buttom" name="sex" required>
+               <option value="">-- 请选择 --</option>
+               <option value="1">男</option>
+               <option value="0">女</option>
+            </select>
          </div>
          <div class="form-left-w3l">
             <p>身份证号</p>
             <input type="text" required  name="id_card" placeholder="请输入18位身份证号码" >
          </div>
-         <div class="form-right-w3ls ">
+         <div class="form-right-w3ls">
+            <p>生日</p>
+            <input name="birth" type="date" placeholder="yyyy/mm/dd" required="" style="height: 26px">
+         </div>
+         <div class="form-left-w3l ">
             <p>联系方式</p>
             <input class="buttom" type="text" required name="principal_tel" placeholder="11位电话号" >
-         </div>
-         <div class="form-left-w3l">
-            <p>生日</p>
-            <input type="text" required  name="birth" placeholder="例如:2020/02/02" >
          </div>
          <div class="form-right-w3ls ">
             <p>用户邮箱</p>
@@ -48,9 +51,9 @@
             <p>详细地址</p>
             <input type="text" required  name="address" placeholder="详细地址" >
          </div>
-         <div class="form-right-w3ls ">
+         <div class="form-right-w3ls">
             <p>成立时间</p>
-            <input class="buttom" type="text" required name="establishment_time" placeholder="成立时间" >
+            <input name="establishment_time" type="date" placeholder="yyyy/mm/dd" required="" style="height: 26px">
          </div>
          <div class="form-left-w3l">
             <p>宗教信仰</p>
@@ -88,9 +91,13 @@
             <p>主营产品+加盟品牌</p>
             <input type="text" required  name="main_products" placeholder="主营产品+加盟品牌" >
          </div>
-         <div class="form-right-w3ls ">
+         <div class="form-right-w3ls">
             <p>老师性质</p>
-            <input class="buttom" type="text" required name="teacher_nature" placeholder="兼职 / 全职" >
+            <select class="form-control buttom" name="teacher_nature" required>
+               <option value="">-- 请选择 --</option>
+               <option value="1">兼职</option>
+               <option value="0">全职</option>
+            </select>
          </div>
          <div class="form-left-w3l">
             <p>目前学生数量</p>
