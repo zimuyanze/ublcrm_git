@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html";i:1586746083;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html";i:1586747222;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +25,7 @@
          </div>
          <div class="form-right-w3ls">
             <p>性别</p>
-            <select class="form-control buttom" name="sex" required>
+            <select class="form-control buttom" name="sex" required style="height: 3.1rem">
                <option value="">-- 请选择 --</option>
                <option value="1">男</option>
                <option value="0">女</option>
@@ -37,7 +37,7 @@
          </div>
          <div class="form-right-w3ls">
             <p>生日</p>
-            <input name="birth" type="date" placeholder="yyyy/mm/dd" required="" style="height: 26px">
+            <input name="birth" type="date" placeholder="yyyy/mm/dd" required="" style="height: 1.63rem">
          </div>
          <div class="form-left-w3l ">
             <p>联系方式</p>
@@ -53,7 +53,7 @@
          </div>
          <div class="form-right-w3ls">
             <p>成立时间</p>
-            <input name="establishment_time" type="date" placeholder="yyyy/mm/dd" required="" style="height: 26px">
+            <input name="establishment_time" type="date" placeholder="yyyy/mm/dd" required="" style="height: 1.63rem">
          </div>
          <div class="form-left-w3l">
             <p>宗教信仰</p>
@@ -93,7 +93,7 @@
          </div>
          <div class="form-right-w3ls">
             <p>老师性质</p>
-            <select class="form-control buttom" name="teacher_nature" required>
+            <select class="form-control buttom" name="teacher_nature" required style="height: 3.1rem">
                <option value="">-- 请选择 --</option>
                <option value="1">兼职</option>
                <option value="0">全职</option>
