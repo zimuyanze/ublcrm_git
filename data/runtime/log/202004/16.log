@@ -1,0 +1,588 @@
+---------------------------------------------------------------
+[ 2020-04-16T09:43:16+08:00 ] 0.0.0.0 GET localhost/
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000615s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ log ] Cron:clearlog Runat 2020-04-16 09:43:16 Use 0.000640 s
+
+---------------------------------------------------------------
+[ 2020-04-16T09:43:16+08:00 ] 0.0.0.0 GET localhost/
+[运行时间：0.077704s] [吞吐率：12.87req/s] [内存消耗：4,180.99kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005740s ]
+---------------------------------------------------------------
+[ 2020-04-16T09:43:16+08:00 ] 0.0.0.0 GET localhost/admin/login/login.html
+[运行时间：0.039822s] [吞吐率：25.11req/s] [内存消耗：4,350.37kb] [文件加载：77]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000327s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.004260s ]
+[ info ] [ RUN ] app\admin\controller\Login->login[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\login\login.html [ array (
+  0 => 'lang',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001853s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-16T09:43:16+08:00 ] 0.0.0.0 GET localhost/admin/login/verify.html
+[运行时间：0.058212s] [吞吐率：17.18req/s] [内存消耗：4,306.27kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/login/login.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-dest' => 'image',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000392s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.003205s ]
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.002052s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-16T09:43:16+08:00 ] 0.0.0.0 GET localhost/geetest.html?t=1587001396348
+[运行时间：0.228692s] [吞吐率：4.37req/s] [内存消耗：2,344.89kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\geetest\\GeetestController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/login/login.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-fetch-dest' => 'empty',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  't' => '1587001396348',
+  'id' => '',
+)
+[ info ] [ RUN ] think\geetest\GeetestController->index[ D:\phpstudy\WWW\ublcrm_zmyz\vendor\yfcmf\geetest\src\GeetestController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.002045s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-16T11:28:15+08:00 ] 0.0.0.0 GET localhost/
+[运行时间：0.056890s] [吞吐率：17.58req/s] [内存消耗：4,185.79kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001214s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004125s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-16T11:28:15+08:00 ] 0.0.0.0 GET localhost/admin/login/login.html
+[运行时间：0.042984s] [吞吐率：23.26req/s] [内存消耗：4,351.55kb] [文件加载：77]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000557s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.005206s ]
+[ info ] [ RUN ] app\admin\controller\Login->login[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\login\login.html [ array (
+  0 => 'lang',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001246s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-16T11:28:15+08:00 ] 0.0.0.0 GET localhost/admin/login/verify.html
+[运行时间：0.063471s] [吞吐率：15.76req/s] [内存消耗：4,306.90kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/login/login.html',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-dest' => 'image',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000335s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.002577s ]
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001304s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-16T11:28:15+08:00 ] 0.0.0.0 GET localhost/geetest.html?t=1587007695285
+[运行时间：0.174603s] [吞吐率：5.73req/s] [内存消耗：2,344.89kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\geetest\\GeetestController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/login/login.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-fetch-dest' => 'empty',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  't' => '1587007695285',
+  'id' => '',
+)
+[ info ] [ RUN ] think\geetest\GeetestController->index[ D:\phpstudy\WWW\ublcrm_zmyz\vendor\yfcmf\geetest\src\GeetestController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001243s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-16T11:28:20+08:00 ] 0.0.0.0 POST localhost/admin/login/runlogin.html
+[运行时间：0.240198s] [吞吐率：4.16req/s] [内存消耗：8,902.73kb] [文件加载：98]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'runlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; yf_logged_user=yZ7XFY3sd2sYcX5Rh; Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/login/login.html',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'sec-fetch-dest' => 'empty',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '49',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'admin',
+  'admin_pwd' => 'admin',
+  'verify' => 'iuids',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.176616s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.002505s ]
+[ info ] [ RUN ] app\admin\controller\Login->runlogin[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001183s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.055728s ] mysql:host=127.0.0.1;port=3306;dbname=ublcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_web_log` [ RunTime:0.059671s ]
+[ sql ] [ SQL ] INSERT INTO `ubl_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (0 , '0.0.0.0' , '保留地址 保留地址  ' , 'Windows 98' , 'Chrome(80.0.3987.100)' , '/admin/login/runlogin.html' , 'admin' , 'Login' , 'runlogin' , 'Ajax' , 's:12:\"保密数据\";' , 1587007700) [ RunTime:0.007321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_admin` [ RunTime:0.021034s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_admin` WHERE  `admin_username` = 'admin'  AND `admin_open` = 1 LIMIT 1 [ RunTime:0.004343s ]
+[ sql ] [ SQL ] UPDATE `ubl_admin`  SET `admin_hits`=20,`admin_last_ip`='0.0.0.0',`admin_last_time`=1587007700  WHERE  `admin_id` = 1 [ RunTime:0.002622s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_admin` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_member_list` [ RunTime:0.004257s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_member_list` WHERE  `member_list_id` = 1 LIMIT 1 [ RunTime:0.000667s ]
+---------------------------------------------------------------
+[ 2020-04-16T11:28:21+08:00 ] 0.0.0.0 GET localhost/
+[运行时间：0.099971s] [吞吐率：10.00req/s] [内存消耗：5,731.98kb] [文件加载：83]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4; yf_logged_user=Kb0uFe1p%3DVYZsV1IZ',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/login/login.html',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000380s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.001669s ]
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\index\index.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'news_list',
+  7 => 'news_count',
+  8 => 'members_count',
+  9 => 'sugs_count',
+  10 => 'coms_count',
+  11 => 'tonews_count',
+  12 => 'ztnews_count',
+  13 => 'difday',
+  14 => 'tomembers_count',
+  15 => 'ztmembers_count',
+  16 => 'difday_m',
+  17 => 'tosugs_count',
+  18 => 'ztsugs_count',
+  19 => 'difday_s',
+  20 => 'tocoms_count',
+  21 => 'ztcoms_count',
+  22 => 'difday_c',
+) ]
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz\addons\maintain\maintain.html [ array (
+  0 => 'danger_mode_debug',
+  1 => 'weak_setting_db_password',
+  2 => 'weak_setting_admin_last_change_password',
+  3 => 'system_safe',
+  4 => 'system_pageshow',
+  5 => 'log_size',
+  6 => 'log_file_cnt',
+) ]
+[ info ] [ BEHAVIOR ] Run \addons\maintain\Maintain @maintain [ RunTime:0.013109s ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001541s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002901s ] mysql:host=127.0.0.1;port=3306;dbname=ublcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_auth_rule` [ RunTime:0.003462s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `ubl_auth_rule` ORDER BY `level` DESC,`sort` [ RunTime:0.002944s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `ubl_auth_rule` WHERE  `id` = -1 LIMIT 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_auth_rule` WHERE  `status` = 1  AND `pid` IS NULL ORDER BY `sort` [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_news` [ RunTime:0.003946s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_news` WHERE  `news_l` = 'zh-cn' ORDER BY `news_hits` DESC LIMIT 0,10 [ RunTime:0.001302s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_news` LIMIT 1 [ RunTime:0.002214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_member_list` [ RunTime:0.001072s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_member_list` LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_plug_sug` [ RunTime:0.002848s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_plug_sug` LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_comments` [ RunTime:0.002525s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_comments` LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_news` WHERE  `news_time` BETWEEN 1586966400 AND 1587052799 LIMIT 1 [ RunTime:0.000972s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_news` WHERE  `news_time` BETWEEN 1586880000 AND 1586966399 LIMIT 1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_member_list` WHERE  `member_list_addtime` BETWEEN 1586966400 AND 1587052799 LIMIT 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_member_list` WHERE  `member_list_addtime` BETWEEN 1586880000 AND 1586966399 LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_plug_sug` WHERE  `plug_sug_addtime` BETWEEN 1586966400 AND 1587052799 LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_plug_sug` WHERE  `plug_sug_addtime` BETWEEN 1586880000 AND 1586966399 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_comments` WHERE  `createtime` BETWEEN 1586966400 AND 1587052799 LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_comments` WHERE  `createtime` BETWEEN 1586880000 AND 1586966399 LIMIT 1 [ RunTime:0.000317s ]
+---------------------------------------------------------------
+[ 2020-04-16T11:28:22+08:00 ] 0.0.0.0 GET localhost/admin/basic_information/index.html
+[运行时间：0.079542s] [吞吐率：12.57req/s] [内存消耗：5,668.63kb] [文件加载：82]
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\phpstudy\WWW\ublcrm_zmyz/app/lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'basic_information',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-3c392d88=6c991831-9f6c-4d48-a978-7d0026ae3d18; PHPSESSID=na9ho0koal1s7havkhgqsfvha4; yf_logged_user=Kb0uFe1p%3DVYZsV1IZ; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-dest' => 'document',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.000322s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.001651s ]
+[ info ] [ RUN ] app\admin\controller\BasicInformation->index[ D:\phpstudy\WWW\ublcrm_zmyz\app\admin\controller\BasicInformation.php ]
+[ info ] [ VIEW ] D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\index.html [ array (
+  0 => 'lang',
+  1 => 'menus',
+  2 => 'menus_curr',
+  3 => 'menus_child',
+  4 => 'id_curr',
+  5 => 'admin_avatar',
+  6 => 'domain',
+  7 => 'group_id',
+  8 => 'opentype_check',
+  9 => 'data',
+  10 => 'page',
+  11 => 'search_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.001470s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010493s ] mysql:host=127.0.0.1;port=3306;dbname=ublcrm;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_auth_rule` [ RunTime:0.003475s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ubl_auth_rule` WHERE  `name` = 'admin/BasicInformation/index' ORDER BY `level` DESC,`sort` LIMIT 1 [ RunTime:0.000887s ]
+[ sql ] [ SQL ] SELECT `id`,`pid` FROM `ubl_auth_rule` ORDER BY `level` DESC,`sort` [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ubl_auth_rule` WHERE  `name` = 'admin/BasicInformation/index'  AND `status` = 1 ORDER BY `level` DESC,`sort` LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `ubl_auth_rule` WHERE  `id` = 328 LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_auth_rule` WHERE  `status` = 1  AND `pid` = 327 ORDER BY `sort` [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_auth_group_access` [ RunTime:0.002658s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_auth_group_access` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ubl_basic_information` [ RunTime:0.002960s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ubl_basic_information` LIMIT 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT * FROM `ubl_basic_information` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000398s ]

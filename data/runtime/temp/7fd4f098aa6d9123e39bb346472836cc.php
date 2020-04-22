@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html";i:1586747222;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"D:\phpstudy\WWW\ublcrm_zmyz/app/home/view/default/\index.html";i:1587367159;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
 <body>
 <h1 class="header-w3ls">Uber enter</h1>
 <div class="appointment-w3">
-   <form action="<?php echo url('home/Index/runshow'); ?>" method="post">
+   <form class=" form-horizontal ajaxForm2" name="form0" action="<?php echo url('home/Index/runshow'); ?>" method="post">
       <div class="personal">
          <h2>机构分析</h2>
          <div class="form-add-w3ls">

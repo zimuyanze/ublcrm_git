@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:71:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\basic_information\index.html";i:1587356781;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:66:"D:\phpstudy\WWW\ublcrm_zmyz/app/admin\view\menu\news_menu_add.html";i:1586240272;s:59:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\base.html";i:1586240272;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\header.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\left_nav.html";i:1586341030;s:63:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\head_nav.html";i:1586250143;s:61:"D:\phpstudy\WWW\ublcrm_zmyz\app\admin\view\public\footer.html";i:1586250143;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -252,146 +252,239 @@
 			<!-- 右侧主要内容页顶部标题栏结束 -->
 			<!-- 右侧下主要内容开始 -->
 			
-<div class="page-content">
-    <div class="row maintop">
-        <div class="col-xs-4 col-sm-2 margintop5">
-            <a href="<?php echo url('admin/BasicInformation/add'); ?>">
-                <button class="btn btn-sm btn-danger">
-                    <i class="ace-icon fa fa-bolt bigger-110"></i>
-                    添加用户信息
-                </button>
-            </a>
-        </div>
-        <div class="col-xs-10 col-sm-5 margintop5">
-            <form name="admin_list_sea" class="form-search" method="post" action="<?php echo url('admin/BasicInformation/index'); ?>">
-                <div class="col-xs-12 col-sm-4  margintop5">
-                    <select name="opentype_check" class="ajax_change" style="height: 34px">
-                        <option value="">按成交状态</option>
-                        <option value="1" <?php if($opentype_check == '1'): ?>selected="selected"<?php endif; ?>>已成交</option>
-                        <option value="0" <?php if($opentype_check == '0'): ?>selected="selected"<?php endif; ?> >未成交</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <i class="ace-icon fa fa-check"></i>
-                    </span>
-                    <input type="text" name="search_name" class="form-control" value="<?php echo $search_name; ?>" placeholder="输入需查询的信息" />
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-purple btn-sm">
-                            <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
-                            搜索
-                        </button>
-                    </span>
-                </div>
-            </form>
-        </div>
-        <div class="col-xs-4 col-sm-5 margintop5">
-            <div class="input-group-btn">
-                <a href="<?php echo url('admin/BasicInformation/index'); ?>">
-                    <button type="button" class="btn btn-sm  btn-purple">
-                        <span class="ace-icon fa fa-globe icon-on-right bigger-110"></span>
-                        显示全部
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div>
+	<div class="page-content">
+		<!--主题-->
+		<div class="page-header">
+			<h1>
+				您当前操作
+				<small>
+					<i class="ace-icon fa fa-angle-double-right"></i>
+					添加菜单
+				</small>
+			</h1>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<form class="form-horizontal ajaxForm2" name="menuadd" method="post" action="<?php echo url('admin/Menu/news_menu_runadd'); ?>">
+					<input type="hidden" name="lang_list" value="<?php echo $menu_l; ?>" />
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 上级栏目： </label>
+						<div class="col-sm-9">
+							<select name="parentid"  id="parentid" class="col-sm-3 selector">
+								<option value="">请选择所属栏目</option>
+								<?php if(is_array($menu_text) || $menu_text instanceof \think\Collection || $menu_text instanceof \think\Paginator): if( count($menu_text)==0 ) : echo "" ;else: foreach($menu_text as $key=>$vo): ?>
+								<option value="<?php echo $vo['id']; ?>" <?php if($vo['id'] == $parentid): ?> selected <?php endif; if($vo['menu_type'] == 1): ?> class="bgccc"<?php else: ?>class="bgc"<?php endif; ?>><?php echo $vo['lefthtml']; ?><?php echo $vo['menu_name']; ?>(<?php if($vo['menu_l'] == 'zh-cn'): ?>中<?php else: ?>英<?php endif; ?>) <?php if($vo['menu_type'] == 1): ?>(频道页)<?php endif; ?></option>
+								<?php endforeach; endif; else: echo "" ;endif; ?>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 菜单名称： </label>
+						<div class="col-sm-9">
+							<input type="text" name="menu_name" id="menu_name"  placeholder="必填：菜单名称"  class="col-xs-10 col-sm-5"  required/>
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle" id="resone"></span>
+											</span>
+						</div>
+					</div>
+
+					<?php if(config('lang_switch_on')): ?>
+					<div id="menu_l" class="form-group <?php if($menu_l != ''): ?>none<?php endif; ?>">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 选择语言： </label>
+						<div class="col-sm-9">
+							<select name="menu_l"  class="col-sm-3 selector" required>
+								<option value="">请选择语言</option>
+								<option value="zh-cn" <?php if($menu_l == 'zh-cn'): ?>selected<?php endif; ?>>中文</option>
+								<option value="en-us" <?php if($menu_l == 'en-us'): ?>selected<?php endif; ?>>英语</option>
+							</select>
+						</div>
+					</div>
+					<?php endif; ?>
+
+					
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 英文菜单名称： </label>
+						<div class="col-sm-9">
+							<input type="text" name="menu_enname" id="menu_enname" placeholder="英文菜单名称" class="col-xs-10 col-sm-5" />
+						</div>
+					</div>
 
 
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 是否开启： </label>
+						<div class="col-sm-9" style="padding-top:5px;">
+							<input name="menu_open" id="menu_open" value="1" class="ace ace-switch ace-switch-4 btn-flat" type="checkbox" />
+							<span class="lbl">&nbsp;&nbsp;默认关闭</span>
+						</div>
+					</div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <div>
-                <form id="leftnav" name="leftnav" method="post" action="" >
-                    <input type="hidden" name="checkk" id="checkk" value="1" /><!--用于判断操作类型-->
-                    <table class="table table-striped table-bordered table-hover" id="dynamic-table">
-                        <colgroup>
-                            <col style="width: 15%;">
-                            <col style="width: 10%;">
-                            <col style="width: 10%;">
-                            <col style="width: 15%;">
-                            <col style="width: 30%;">
-                            <col style="width: 10%;">
-                            <col style="width: 10%;">
-                        </colgroup>
-                        <thead>
-                        <tr>
-                            <th class="hidden-sm hidden-xs">编号</th>
-                            <th class="hidden-sm hidden-xs">机构名称</th>
-                            <th class="hidden-sm hidden-xs">校长姓名</th>
-                            <th class="hidden-sm hidden-xs">联系方式</th>
-                            <th class="hidden-sm hidden-xs">机构详细地址</th>
-                            <th class="hidden-sm hidden-xs">是否成交</th>
-                            <th class="hidden-sm hidden-xs" style="border-right:#CCC solid 1px;">操作</th>
-                        </tr>
-                        </thead>
 
-                        <tbody>
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 排序（从小到大）： </label>
+						<div class="col-sm-9">
+							<input type="text" name="listorder" id="menu_order" value="50" class="col-xs-10 col-sm-1" />
+						</div>
+					</div>
 
-                        <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$v): ?>
-                        <tr>
-                            <td><?php echo $v['number']; ?></td>
-                            <td><?php echo $v['company_name']; ?></td>
-                            <td><?php echo $v['principal_name']; ?></td>
-                            <td><?php echo $v['principal_tel']; ?></td>
-                            <td><?php echo subtext($v['company_address'] , 30); ?></td>
-                            <td>
-                                <?php if($v['is_deal'] == 1): ?>
-                                <span style="color: green">已成交</span>
-                                <?php else: ?>
-                                <span style="color: red">未成交</span>
-                                <?php endif; ?>
-                            </td>
-                            <td>
-                                <div class="hidden-sm hidden-xs action-buttons">
-                                    <a class="green" href="<?php echo url('admin/BasicInformation/',array('id'=>$v['id'])); ?>" title="转案">
-                                        <i class="ace-icon fa fa-share bigger-130"></i>
-                                    </a>
-                                    <?php if(($v['is_details'])==1): if(($group_id == 4 || 1)): ?>
-                                    <a class="orange" href="<?php echo url('admin/BasicInformation/show',array('id'=>$v['id'])); ?>" title="查看">
-                                        <i class="ace-icon fa fa-eye bigger-130"></i>
-                                    </a>
-                                    <?php endif; else: ?>
-                                    <a class="yellow" href=" javascript:;" onclick="copyText('<?php echo $domain; ?><?php echo url('home/Index/index',array('id'=>$v['id'])); ?>')" title="点此复制" >
-                                        <i class="ace-icon fa fa-file bigger-130"></i>
-                                    </a>
-                                    <?php endif; ?>
-                                    <a class="blue" href="<?php echo url('admin/BasicInformation/edit',array('id'=>$v['id'])); ?>" title="修改">
-                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
-                                    </a>
-                                    <?php if(($group_id == 4 || 1)): ?>
-                                    <a class="red confirm-rst-url-btn" data-info="你确定要删除吗？" href="<?php echo url('admin/BasicInformation/del',array('id'=>$v['id'])); ?>" title="删除">
-                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
-                                    </a>
-                                    <?php endif; ?>
-                                </div>
-                            </td>
-                        </tr>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <tr>
-                            <td height="50" colspan="10" align="left"><?php echo $page; ?></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    function copyText(obj) {
-        var Url2 = obj;
-        var oInput = document.createElement('input');
-        oInput.value = Url2;
-        document.body.appendChild(oInput);
-        oInput.select();
-        document.execCommand("Copy");
-        oInput.className = 'oInput';
-        oInput.style.display = 'none';
-        layer.alert("复制成功", { icon: 6 });
-    }
-</script>
 
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 菜单类型： </label>
+						<div class="col-sm-9">
+							<div class="radio">
+								<label>
+									<input name="menu_type" type="radio" class="ace" id="type1" value="1" checked="checked" />
+									<span class="lbl"> 作为频道页，不可作为栏目发布文章</span>
+								</label>
+							</div>
+
+							<div class="radio">
+								<label>
+									<input name="menu_type" id="type2" type="radio" class="ace" value="2"/>
+									<span class="lbl"> 不直接发布内容，用于跳转页面</span>
+								</label>
+							</div>
+
+							<div class="radio">
+								<label>
+									<input name="menu_type" id="type3" type="radio" class="ace" value="3"/>
+									<span class="lbl"> 作为发布栏目，文章列表模式</span>
+								</label>
+							</div>
+
+							<div class="radio">
+								<label>
+									<input name="menu_type" id="type4" type="radio" class="ace" value="4"/>
+									<span class="lbl"> 单页面模式，例如企业简介</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group" id="address">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 跳转地址： </label>
+						<div class="col-sm-9">
+							<input type="text" name="menu_address" id="menu_address" placeholder="跳转地址" class="col-xs-10 col-sm-7" />
+                                            <span class="help-inline col-xs-12 col-sm-5">
+												<span class="middle">正确格式：http:// 开头</span>
+											</span>
+						</div>
+					</div>
+					<div class="form-group" id="model">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 使用模型选择： </label>
+						<div class="col-sm-9">
+							<select name="menu_modelid"  class="col-sm-3 selector">
+								<option value="0">请选择模型</option>
+								<?php if(is_array($model) || $model instanceof \think\Collection || $model instanceof \think\Paginator): if( count($model)==0 ) : echo "" ;else: foreach($model as $key=>$vo): ?>
+								<option value="<?php echo $vo['model_id']; ?>"><?php echo $vo['model_title']; ?></option>
+								<?php endforeach; endif; else: echo "" ;endif; ?>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group" id="listtpl">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 列表页(单页)模板选择： </label>
+						<div class="col-sm-9">
+							<select name="menu_listtpl"  class="col-sm-3 selector">
+								<option value="">请选择模板</option>
+								<?php if(is_array($tpls) || $tpls instanceof \think\Collection || $tpls instanceof \think\Paginator): if( count($tpls)==0 ) : echo "" ;else: foreach($tpls as $key=>$vo): ?>
+									<option value="<?php echo $vo; ?>"><?php echo $vo; ?></option>
+									<?php endforeach; endif; else: echo "" ;endif; ?>
+							</select>
+						</div>
+					</div>
+
+
+					<div class="form-group" id="newstpl">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 单文章页模板选择： </label>
+						<div class="col-sm-9">
+							<select name="menu_newstpl"  class="col-sm-3 selector">
+								<option value="">请选择模板</option>
+								<?php if(is_array($tpls) || $tpls instanceof \think\Collection || $tpls instanceof \think\Paginator): if( count($tpls)==0 ) : echo "" ;else: foreach($tpls as $key=>$vo): ?>
+									<option value="<?php echo $vo; ?>"><?php echo $vo; ?></option>
+								<?php endforeach; endif; else: echo "" ;endif; ?>
+							</select>
+						</div>
+					</div>
+
+
+					<div class="form-group" id="pic_list">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 缩略图： </label>
+						<div class="col-sm-9">
+							<a href="javascript:;" class="file">
+								<input type="file" name="file0" id="file0" multiple="multiple"/>
+								选择上传文件
+							</a>
+							<a href="javascript:;" onclick="return backpic('/public/img/no_img.jpg');" title="还原修改前的图片" class="file">
+								撤销上传
+							</a>
+
+							<div><img src="/public/img/no_img.jpg" height="70" id="img0" ></div>
+						</div>
+					</div>
+
+
+					<div class="form-group" id="menu_content">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 单页面内容： </label>
+						<div class="col-sm-9">
+							<script src="/public/ueditor/ueditor.config.js" type="text/javascript"></script>
+							<script src="/public/ueditor/ueditor.all.js" type="text/javascript"></script>
+							<textarea name="menu_content" rows="100%" style="width:100%" id="myEditor"></textarea>
+							<script type="text/javascript">
+								var editor = new UE.ui.Editor();
+								editor.render("myEditor");
+							</script>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> SEO标题： </label>
+						<div class="col-sm-9">
+							<input type="text" id="menu_title" name="menu_seo_title"  placeholder="SEO标题"  class="col-xs-10 col-sm-5" />
+
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> SEO关键字： </label>
+						<div class="col-sm-9">
+							<input type="text" id="menu_key" name="menu_seo_key"  placeholder="SEO关键字" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">每个关键字用英文 , 号隔开</span>
+											</span>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> SEO描述： </label>
+						<div class="col-sm-9">
+							<input type="text" id="menu_des" name="menu_seo_des"  placeholder="SEO描述"  class="col-xs-10 col-sm-10" />
+						</div>
+					</div>
+
+
+					<div class="clearfix form-actions">
+						<div class="col-md-offset-3 col-md-9">
+							<button class="btn btn-info" type="submit">
+								<i class="ace-icon fa fa-check bigger-110"></i>
+								保存
+							</button>
+
+							&nbsp; &nbsp; &nbsp;
+							<button class="btn" type="reset">
+								<i class="ace-icon fa fa-undo bigger-110"></i>
+								重置
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div><!-- /.page-content -->
 
 			<!-- 右侧下主要内容结束 -->
 		</div>
@@ -428,6 +521,35 @@
 <script src="/public/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="/public/yfcmf/yfcmf.js?<?php echo time(); ?>"></script>
 <!-- 此页相关插件js -->
+
+    <script>
+        $('#address,#model,#menu_content,#single,#pic_list').hide();//默认隐藏
+        $('#type2').click(function(){
+            $('#address').show();
+            $('#menu_content,#pic_list,#single,#listtpl,#newstpl,#model').hide();
+        });
+        $('#type1').click(function(){
+            $('#address,#menu_content,#pic_list,#single,#model').hide();
+            $('#listtpl,#newstpl').show();
+        });
+        $('#type3').click(function(){
+            $('#address,#menu_content,#pic_list,#single').hide();
+            $('#listtpl,#newstpl,#model').show();
+        });
+        $('#type4').click(function(){
+            $('#address,#newstpl,#model').hide();
+            $('#single，#listtpl,#menu_content,#pic_list').show();
+        });
+        //语言
+		$('#parentid').change(function(){
+            var $parentid=$(this).children('option:selected').val();
+            if($parentid){
+                $('#menu_l').hide();
+			}else{
+                $('#menu_l').show();
+			}
+        });
+    </script>
 
 <!-- 与此页相关的js -->
 </body>

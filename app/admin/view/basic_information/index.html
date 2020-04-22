@@ -1,4 +1,5 @@
 {extend name="admin@public/base" /}
+header('Access-Control-Allow-Origin: *');
 {block name="main-content"}
 <div class="page-content">
     <div class="row maintop">
@@ -102,8 +103,8 @@
                                     </a>
                                     {/if}
                                     {else}
-                                    <a class="yellow confirm-rst-url-btn" href=" javascript:;" title="推送"  data-info="{$domain}{:url('home/Index/index',array('id'=>$v['id']))}">
-                                        <i class="ace-icon fa fa-cloud-download bigger-130"></i>
+                                    <a class="yellow" href=" javascript:;" onclick="copyText('{$domain}{:url('home/Index/index',array('id'=>$v['id']))}')" title="点此复制" >
+                                        <i class="ace-icon fa fa-file bigger-130"></i>
                                     </a>
                                     {/if}
                                     <a class="blue" href="{:url('admin/BasicInformation/edit',array('id'=>$v['id']))}" title="修改">
@@ -128,4 +129,18 @@
         </div>
     </div>
 </div>
+<script>
+    function copyText(obj) {
+        var Url2 = obj;
+        var oInput = document.createElement('input');
+        oInput.value = Url2;
+        document.body.appendChild(oInput);
+        oInput.select();
+        document.execCommand("Copy");
+        oInput.className = 'oInput';
+        oInput.style.display = 'none';
+        layer.alert("复制成功", { icon: 6 });
+    }
+</script>
+
 {/block}
